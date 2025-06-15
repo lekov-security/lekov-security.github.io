@@ -33,77 +33,65 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 
-        <style>
-            body::before {
-                content: '';
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                background-image: 
-                    linear-gradient(to right, rgba(57, 255, 20, 0.05) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
-                background-size: 40px 40px;
-                z-index: -1;
-                animation: pan-grid 200s linear infinite;
+        <style type="text/tailwindcss">
+            @theme {
+                --color-cyber-dark: #050505;
+                --color-cyber-secondary: #111111;
+                --color-cyber-accent: #39FF14;
+                --color-cyber-light: #E0E0E0;
+
+                --font-sans: 'Inter', 'sans-serif';
+                --font-mono: 'JetBrains Mono', 'monospace';
+                --font-display: 'Orbitron', 'sans-serif';
             }
 
             @keyframes pan-grid {
                 0% { background-position: 0 0; }
                 100% { background-position: 2000px 2000px; }
             }
-
-            .text-glow {
-                text-shadow: 0 0 8px theme('colors.cyber.accent'), 0 0 20px theme('colors.cyber.accent');
-            }
-
-            .box-glow {
-                box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
-            }
-
-            .reveal {
-                opacity: 0;
-                transform: translateY(20px);
-                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            }
-
-            .reveal.visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            .typing-cursor::after {
-                content: '_';
-                animation: blink 1s step-end infinite;
-            }
-            
             @keyframes blink {
                 50% { opacity: 0; }
             }
-        </style>
 
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            cyber: {
-                                dark: '#050505',
-                                secondary: '#111111',
-                                accent: '#39FF14',
-                                light: '#E0E0E0'
-                            }
-                        },
-                        fontFamily: {
-                            sans: ['Inter', 'sans-serif'],
-                            mono: ['JetBrains Mono', 'monospace'],
-                            display: ['Orbitron', 'sans-serif']
-                        }
-                    }
+            @layer base {
+                body::before {
+                    content: '';
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background-image: 
+                        linear-gradient(to right, rgba(57, 255, 20, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
+                    background-size: 40px 40px;
+                    z-index: -1;
+                    animation: pan-grid 200s linear infinite;
                 }
             }
-        </script>
+
+            @layer utilities {
+                .text-glow {
+                    text-shadow: 0 0 8px theme('colors.cyber.accent'), 0 0 20px theme('colors.cyber.accent');
+                }
+                .box-glow {
+                    box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+                }
+                .reveal {
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+                }
+                .reveal.visible {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                .typing-cursor::after {
+                    content: '_';
+                    animation: blink 1s step-end infinite;
+                }
+            }
+        </style>
 
         <script type="application/ld+json">
             {
