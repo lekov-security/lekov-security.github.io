@@ -8,6 +8,7 @@
 
         <title>Penetration Testing and Custom Software Development - Lekov Security</title>
         <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+        <link rel="canonical" href="https://lekov-security.mk/">
 
         <script src="https://cdn.tailwindcss.com"></script>
 
@@ -91,7 +92,7 @@
                 "@graph": [
                     {
                         "@type": "Organization",
-                        "name": "Lekov Security",
+                        "name": "Lkov Security",
                         "url": "https://lekov-security.mk/",
                         "logo": "https://lekov-security.mk/assets/images/logo.svg",
                         "description": "Lekov Security offers expert web application penetration testing and secure custom software development. We provide simple, powerful solutions to protect your business.",
@@ -192,7 +193,6 @@
             }
         </script>
     </head>
-
     <body class="bg-cyber-dark text-cyber-light font-sans antialiased">
         <header id="header" class="bg-cyber-dark/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-cyber-accent/20 transition-all duration-300">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -202,15 +202,28 @@
                         <span class="text-xl sm:text-2xl font-display font-bold text-cyber-accent">Lekov Security<span class="text-white">.</span></span>
                     </a>
 
-                    <nav class="hidden md:flex items-center space-x-8">
-                        <a href="#home" class="font-mono text-sm hover:text-cyber-accent transition-colors">/home</a>
-                        <a href="#about" class="font-mono text-sm hover:text-cyber-accent transition-colors">/about</a>
-                        <a href="#services" class="font-mono text-sm hover:text-cyber-accent transition-colors">/services</a>
-                    </nav>
+                    <div class="hidden md:flex items-center space-x-6">
+                        <nav class="flex items-center space-x-8">
+                            <a href="#home" class="font-mono text-sm hover:text-cyber-accent transition-colors">/home</a>
+                            <a href="#about" class="font-mono text-sm hover:text-cyber-accent transition-colors">/about</a>
+                            <a href="#services" class="font-mono text-sm hover:text-cyber-accent transition-colors">/services</a>
+                        </nav>
 
-                    <a href="#contact" class="hidden md:block px-5 py-2 border border-cyber-accent text-cyber-accent font-mono text-sm hover:bg-cyber-accent hover:text-cyber-dark transition-all duration-300">
-                        [ /contact ]
-                    </a>
+                        <div class="relative" id="lang-switcher-desktop">
+                            <button id="lang-btn-desktop" class="flex items-center font-mono text-sm hover:text-cyber-accent transition-colors">
+                                <span>/lang/en</span>
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div id="lang-menu-desktop" class="hidden absolute right-0 mt-2 py-2 w-24 bg-cyber-secondary border border-cyber-accent/30 box-glow">
+                                <a href="/" class="block px-4 py-2 font-mono text-sm text-cyber-light hover:bg-cyber-accent hover:text-cyber-dark">/en</a>
+                                <a href="/mk" class="block px-4 py-2 font-mono text-sm text-cyber-light hover:bg-cyber-accent hover:text-cyber-dark">/mk</a>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="px-5 py-2 border border-cyber-accent text-cyber-accent font-mono text-sm hover:bg-cyber-accent hover:text-cyber-dark transition-all duration-300">
+                            [ /contact ]
+                        </a>
+                    </div>
 
                     <button id="mobile-menu-btn" class="md:hidden text-cyber-light focus:outline-none">
                         <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -224,6 +237,18 @@
                     <a href="#home" class="font-mono hover:text-cyber-accent transition-colors">/home</a>
                     <a href="#about" class="font-mono hover:text-cyber-accent transition-colors">/about</a>
                     <a href="#services" class="font-mono hover:text-cyber-accent transition-colors">/services</a>
+
+                    <div class="relative" id="lang-switcher-mobile">
+                        <button id="lang-btn-mobile" class="flex items-center font-mono hover:text-cyber-accent transition-colors">
+                            <span>/lang/en</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="lang-menu-mobile" class="hidden absolute left-1/2 -translate-x-1/2 mt-2 py-2 w-24 bg-cyber-secondary border border-cyber-accent/30 box-glow z-10">
+                            <a href="/" class="block text-center px-4 py-2 font-mono text-sm text-cyber-light hover:bg-cyber-accent hover:text-cyber-dark">/en</a>
+                            <a href="/mk" class="block text-center px-4 py-2 font-mono text-sm text-cyber-light hover:bg-cyber-accent hover:text-cyber-dark">/mk</a>
+                        </div>
+                    </div>
+                    
                     <a href="#contact" class="mt-2 px-6 py-2 border border-cyber-accent text-cyber-accent font-mono text-sm hover:bg-cyber-accent hover:text-cyber-dark transition-all duration-300">
                         [ /contact ]
                     </a>
@@ -240,7 +265,7 @@
                     </h1>
 
                     <p class="text-lg sm:text-xl text-cyber-light/80 max-w-2xl mx-auto mb-10 reveal" style="transition-delay: 200ms;">
-                        We simplify cybersecurity with robust web application testing and secure custom software. Our practical solutions protect your business assets, letting you focus on growth.
+                        We simplify cybersecurity through penetration testing and software solutions. Our practical solutions protect your business assets, letting you focus on growth.
                     </p>
 
                     <div class="flex flex-col sm:flex-row justify-center gap-4 reveal" style="transition-delay: 400ms;">
@@ -258,7 +283,7 @@
             <section id="about" class="py-20 lg:py-32 bg-cyber-secondary/80">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
-                        <div class="reveal">
+                        <div class="reveal text-center lg:text-left">
                             <h2 class="font-display text-4xl font-bold text-white mb-4">About Lekov Security</h2>
                             <p class="font-mono text-cyber-accent mb-6">// Our Proactive & Simplified Cybersecurity Philosophy</p>
                             <p class="text-cyber-light/80 leading-relaxed">
@@ -290,9 +315,9 @@
                             <h3 class="font-display text-2xl font-bold text-cyber-accent mb-4">Comprehensive Web Application Security Testing</h3>
                             <p class="text-cyber-light/80 mb-6">Our experts identify vulnerabilities in your web applications and APIs. We provide clear, actionable reports, ensuring you understand the risks and how to mitigate them.</p>
                             <ul class="font-mono text-sm space-y-3">
-                                <li class="flex items-center"><span class="text-cyber-accent mr-3">&gt;</span> Clear, Actionable Reports</li>
-                                <li class="flex items-center"><span class="text-cyber-accent mr-3">&gt;</span> Manual & Automated Testing</li>
-                                <li class="flex items-center"><span class="text-cyber-accent mr-3">&gt;</span> Prioritized Fixes For What Matters</li>
+                                <li class="flex items-center"><span class="text-cyber-accent mr-3">&gt;</span> Clear, actionable reports</li>
+                                <li class="flex items-center"><span class="text-cyber-accent mr-3">&gt;</span> Manual & automated penetration testing</li>
+                                <li class="flex items-center"><span class="text-cyber-accent mr-3">&gt;</span> Prioritized fixes for what matters</li>
                             </ul>
                         </div>
 
@@ -300,13 +325,12 @@
                             <h3 class="font-display text-2xl font-bold text-cyber-accent mb-4">Secure Custom Software Development</h3>
                             <p class="text-cyber-light/80 mb-6">We build custom software tailored to your business processes. Our development lifecycle integrates security from the ground up, creating reliable and scalable solutions that are secure by design.	</p>
                             <ul class="font-mono text-sm space-y-3">
-                                <li class="flex items-center"><span class="text-cyber-accent mr-3">&gt;</span> Security-First Development Process</li>
-                                <li class="flex items-center"><span class="text-cyber-accent mr-3">&gt;</span> Efficient and Reliable Code</li>
-                                <li class="flex items-center"><span class="text-cyber-accent mr-3">&gt;</span> Solutions That Grow With Your Business</li>
+                                <li class="flex items-center"><span class="text-cyber-accent mr-3">&gt;</span> Security-first development process</li>
+                                <li class="flex items-center"><span class="text-cyber-accent mr-3">&gt;</span> Efficient and reliable code</li>
+                                <li class="flex items-center"><span class="text-cyber-accent mr-3">&gt;</span> Solutions that grow with your business</li>
                             </ul>
                         </div>
                     </div>
-
                     <div class="mt-12 text-center reveal">
                         <div class="bg-cyber-secondary/80 border border-dashed border-cyber-accent/50 p-8 max-w-2xl mx-auto">
                             <h3 class="font-display text-2xl font-bold text-cyber-accent mb-4">Coming Soon: Automated Penetration Testing Framework</h3>
@@ -373,7 +397,7 @@
         <footer class="border-t border-cyber-accent/20">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-cyber-light/50">
                 <p class="font-mono text-sm">&copy; 2025 Lekov Security. All Rights Reserved.</p>
-                <p class="font-mono text-xs mt-2">Lekov Security: Your Partner in Cybersecurity and Secure Software Development.</p>
+                <p class="font-mono text-xs mt-2">Your Partner in Cybersecurity and Secure Software Development.</p>
             </div>
         </footer>
 
@@ -396,6 +420,38 @@
                         menuOpenIcon.classList.remove('hidden');
                         menuCloseIcon.classList.add('hidden');
                     }
+                });
+
+                const langBtnDesktop = document.getElementById('lang-btn-desktop');
+                const langMenuDesktop = document.getElementById('lang-menu-desktop');
+                const langBtnMobile = document.getElementById('lang-btn-mobile');
+                const langMenuMobile = document.getElementById('lang-menu-mobile');
+
+                const setupLangSwitcher = (btn, menu) => {
+                    if (btn && menu) {
+                        btn.addEventListener('click', (event) => {
+                            event.stopPropagation();
+
+                            if (menu === langMenuDesktop && langMenuMobile)
+                                langMenuMobile.classList.add('hidden');
+
+                            if (menu === langMenuMobile && langMenuDesktop)
+                                langMenuDesktop.classList.add('hidden');
+
+                            menu.classList.toggle('hidden');
+                        });
+                    }
+                };
+
+                setupLangSwitcher(langBtnDesktop, langMenuDesktop);
+                setupLangSwitcher(langBtnMobile, langMenuMobile);
+
+                window.addEventListener('click', () => {
+                    if (langMenuDesktop && !langMenuDesktop.classList.contains('hidden'))
+                        langMenuDesktop.classList.add('hidden');
+
+                    if (langMenuMobile && !langMenuMobile.classList.contains('hidden'))
+                        langMenuMobile.classList.add('hidden');
                 });
 
                 const typingTextElement = document.getElementById('typing-text');
@@ -427,16 +483,15 @@
 
                     setTimeout(type, typeSpeed);
                 }
-                if (typingTextElement) {
+
+                if (typingTextElement)
                     type();
-                }
 
                 const revealElements = document.querySelectorAll('.reveal');
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
-                        if (entry.isIntersecting) {
+                        if (entry.isIntersecting)
                             entry.target.classList.add('visible');
-                        }
                     });
                 }, {
                     threshold: 0.1
