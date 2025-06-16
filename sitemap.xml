@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://lekov-security.mk/index.html</loc>
-        <lastmod>2025-06-15</lastmod>
+        <lastmod>2025-06-16</lastmod>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://lekov-security.mk/index.html" />
         <xhtml:link rel="alternate" hreflang="en" href="https://lekov-security.mk/index.html" />
         <xhtml:link rel="alternate" hreflang="mk" href="https://lekov-security.mk/mk/index.html" />
@@ -10,9 +10,41 @@
 
     <url>
         <loc>https://lekov-security.mk/mk/index.html</loc>
-        <lastmod>2025-06-15</lastmod>
+        <lastmod>2025-06-16</lastmod>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://lekov-security.mk/index.html" />
         <xhtml:link rel="alternate" hreflang="en" href="https://lekov-security.mk/index.html" />
         <xhtml:link rel="alternate" hreflang="mk" href="https://lekov-security.mk/mk/index.html" />
+    </url>
+
+    <url>
+        <loc>https://lekov-security.mk/services/web-application-penetration-testing/index.html</loc>
+        <lastmod>2025-06-16</lastmod>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://lekov-security.mk/services/web-application-penetration-testing/index.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://lekov-security.mk/services/web-application-penetration-testing/index.html" />
+        <xhtml:link rel="alternate" hreflang="mk" href="https://lekov-security.mk/mk/services/web-application-penetration-testing/index.html" />
+    </url>
+
+    <url>
+        <loc>https://lekov-security.mk/mk/services/web-application-penetration-testing/index.html</loc>
+        <lastmod>2025-06-16</lastmod>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://lekov-security.mk/services/web-application-penetration-testing/index.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://lekov-security.mk/services/web-application-penetration-testing/index.html" />
+        <xhtml:link rel="alternate" hreflang="mk" href="https://lekov-security.mk/mk/services/web-application-penetration-testing/index.html" />
+    </url>
+
+    <url>
+        <loc>https://lekov-security.mk/services/secure-custom-software-development/index.html</loc>
+        <lastmod>2025-06-16</lastmod>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://lekov-security.mk/services/secure-custom-software-development/index.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://lekov-security.mk/services/secure-custom-software-development/index.html" />
+        <xhtml:link rel="alternate" hreflang="mk" href="https://lekov-security.mk/mk/services/secure-custom-software-development/index.html" />
+    </url>
+
+    <url>
+        <loc>https://lekov-security.mk/mk/services/secure-custom-software-development/index.html</loc>
+        <lastmod>2025-06-16</lastmod>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://lekov-security.mk/services/secure-custom-software-development/index.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://lekov-security.mk/services/secure-custom-software-development/index.html" />
+        <xhtml:link rel="alternate" hreflang="mk" href="https://lekov-security.mk/mk/services/secure-custom-software-development/index.html" />
     </url>
 </urlset>
