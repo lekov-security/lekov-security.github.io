@@ -51,6 +51,7 @@
                 0% { background-position: 0 0; }
                 100% { background-position: 2000px 2000px; }
             }
+
             @keyframes blink {
                 50% { opacity: 0; }
             }
@@ -76,14 +77,17 @@
                 .text-glow {
                     text-shadow: 0 0 8px theme('colors.cyber.accent'), 0 0 20px theme('colors.cyber.accent');
                 }
+
                 .box-glow {
                     box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
                 }
+
                 .reveal {
                     opacity: 0;
                     transform: translateY(20px);
                     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
                 }
+
                 .reveal.visible {
                     opacity: 1;
                     transform: translateY(0);
@@ -103,7 +107,7 @@
                     "@type": "Organization",
                     "name": "Lekov Security",
                     "url": "https://lekov-security.mk/",
-                    "logo": "https://lekov-security.mk/assets/images/logo.svg",
+                    "logo": "https://lekov-security.mk/assets/images/logo.png",
                     "contactPoint": {
                         "@type": "ContactPoint",
                         "telephone": "+389-74-221-337",
