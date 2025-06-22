@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" style="-ms-overflow-style: none; scrollbar-width: none;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Lekov Security - Coming Soon. Cybersecurity and secure software development services launching soon.">
+
+        <title>Coming Soon - Lekov Security</title>
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+        <link rel="canonical" href="https://lekov-security.mk/">
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://lekov-security.mk/">
+        <meta property="og:title" content="Lekov Security - Coming Soon">
+        <meta property="og:description" content="Cybersecurity and secure software development services launching soon.">
+        <meta property="og:image" content="https://lekov-security.mk/assets/images/og-image.png">
+        <meta property="og:site_name" content="Lekov Security">
+        <meta property="og:locale" content="en_US">
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+        <style type="text/tailwindcss">
+            @theme {
+                --color-cyber-dark: #050505;
+                --color-cyber-secondary: #111111;
+                --color-cyber-accent: #39FF14;
+                --color-cyber-light: #E0E0E0;
+
+                --font-sans: 'Inter', 'sans-serif';
+                --font-mono: 'JetBrains Mono', 'monospace';
+                --font-display: 'Orbitron', 'sans-serif';
+            }
+
+            @keyframes pan-grid {
+                0% { background-position: 0 0; }
+                100% { background-position: 2000px 2000px; }
+            }
+
+            @keyframes typing {
+                from { width: 0; }
+                to { width: 100%; }
+            }
+
+            @keyframes blink {
+                0%, 50% { border-color: transparent; }
+                51%, 100% { border-color: theme('colors.cyber.accent'); }
+            }
+
+            @keyframes pulse-glow {
+                0%, 100% { box-shadow: 0 0 15px rgba(57, 255, 20, 0.3); }
+                50% { box-shadow: 0 0 25px rgba(57, 255, 20, 0.6); }
+            }
+
+            @layer base {
+                body::before {
+                    content: '';
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background-image: 
+                        linear-gradient(to right, rgba(57, 255, 20, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
+                    background-size: 40px 40px;
+                    z-index: -1;
+                    animation: pan-grid 200s linear infinite;
+                }
+            }
+
+            @layer utilities {
+                .text-glow {
+                    text-shadow: 0 0 8px theme('colors.cyber.accent'), 0 0 20px theme('colors.cyber.accent');
+                }
+
+                .box-glow {
+                    box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+                }
+
+                .box-glow-pulse {
+                    animation: pulse-glow 2s ease-in-out infinite;
+                }
+
+                .typing-effect {
+                    overflow: hidden;
+                    border-right: 2px solid theme('colors.cyber.accent');
+                    white-space: nowrap;
+                    animation: typing 3s steps(40, end), blink 1s step-end infinite;
+                    animation-delay: 1s;
+                    width: 0;
+                    animation-fill-mode: both;
+                }
+
+                .reveal {
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+                }
+
+                .reveal.visible {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+
+    <body class="bg-cyber-dark text-cyber-light font-sans antialiased min-h-screen flex flex-col">
+        <header id="header" class="bg-cyber-dark/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-cyber-accent/20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <a href="/" class="flex items-center space-x-3">
+                        <img src="/assets/images/logo.svg" alt="Lekov Security - Cybersecurity and Software Solutions Logo" class="h-12 w-auto">
+                        <span class="text-xl sm:text-2xl font-display font-bold text-cyber-accent">Lekov Security<span class="text-white">.</span></span>
+                    </a>
+
+                    <div class="hidden md:flex items-center space-x-6">
+                        <div class="font-mono text-sm text-cyber-accent">[ INITIALIZING... ]</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="reveal">
+                    <div class="font-mono text-cyber-accent/80 text-sm mb-4">// System Status: Preparing Launch Sequence</div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 200ms;">
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-white mb-6">
+                        <span class="text-cyber-accent text-glow">COMING</span> SOON
+                    </h1>
+                </div>
+
+                <div class="reveal" style="transition-delay: 400ms;">
+                    <div class="font-mono text-lg text-cyber-light mb-8 typing-effect">
+                        Preparing advanced cybersecurity solutions...
+                    </div>
+                </div>
+
+                <div class="reveal box-glow-pulse bg-cyber-secondary/80 border border-cyber-accent/30 p-8 md:p-12 mb-8" style="transition-delay: 600ms;">
+                    <h2 class="font-display text-2xl lg:text-3xl font-bold text-white mb-4">
+                        <span class="text-cyber-accent">&gt;</span> Mission Parameters
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-6 text-left">
+                        <div>
+                            <h3 class="font-mono text-cyber-accent text-sm mb-2">[ PENETRATION_TESTING ]</h3>
+                            <p class="text-cyber-light/80 text-sm">Advanced web application security assessments</p>
+                        </div>
+                        <div>
+                            <h3 class="font-mono text-cyber-accent text-sm mb-2">[ SECURE_DEVELOPMENT ]</h3>
+                            <p class="text-cyber-light/80 text-sm">Custom software built with security-first principles</p>
+                        </div>
+                        <div>
+                            <h3 class="font-mono text-cyber-accent text-sm mb-2">[ VULNERABILITY_RESEARCH ]</h3>
+                            <p class="text-cyber-light/80 text-sm">Cutting-edge security research and analysis</p>
+                        </div>
+                        <div>
+                            <h3 class="font-mono text-cyber-accent text-sm mb-2">[ CONSULTATION ]</h3>
+                            <p class="text-cyber-light/80 text-sm">Strategic cybersecurity guidance and planning</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal mt-12" style="transition-delay: 1200ms;">
+                    <div class="font-mono text-xs text-cyber-light/40">
+                        // Securing digital infrastructures, one line of code at a time
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="border-t border-cyber-accent/20 mt-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-cyber-light/50">
+                <p class="font-mono text-sm">&copy; 2025 Lekov Security. All Rights Reserved.</p>
+                <p class="font-mono text-sm mt-1">Kratovo, North Macedonia</p>
+                <p class="font-mono text-xs mt-2">Your Partner in Cybersecurity and Secure Software Development.</p>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Reveal animation observer
+                const revealElements = document.querySelectorAll('.reveal');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                });
+
+                revealElements.forEach(el => observer.observe(el));
+
+                // Terminal cursor blink effect
+                setInterval(() => {
+                    const cursors = document.querySelectorAll('.typing-effect');
+                    cursors.forEach(cursor => {
+                        cursor.style.borderColor = cursor.style.borderColor === 'transparent' ? '#39FF14' : 'transparent';
+                    });
+                }, 500);
+            });
+        </script>
+    </body>
+</html>
